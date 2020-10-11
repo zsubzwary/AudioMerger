@@ -48,18 +48,18 @@ namespace AudioMerger
 
             Console.WriteLine($"Total Item’s in List-A: {listA.Count}, List-B: {listB.Count}");
 
-            Console.WriteLine(@"
-============================================================
-                RESULT AFTER SORTING
-============================================================");
+//            Console.WriteLine(@"
+//============================================================
+//                RESULT AFTER SORTING
+//============================================================");
 
             listA.Sort();
             listB.Sort();
 
-            Console.WriteLine("LIST A");
+            //Console.WriteLine("LIST A");
             foreach (var item in listA)
             {
-                Console.WriteLine(item);
+                //Console.WriteLine(item);
 
                 var firstLetterRemovedNameOfA = item.Substring(1);
                 //Console.WriteLine(firstLetterRemovedNameOfA);
@@ -72,11 +72,11 @@ namespace AudioMerger
 
 
             }
-            Console.WriteLine("\nLIST B");
-            foreach (var item in listB)
-            {
-                Console.WriteLine(item);
-            }
+            //Console.WriteLine("\nLIST B");
+            //foreach (var item in listB)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
 
             Console.WriteLine(@"
