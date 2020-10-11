@@ -18,10 +18,9 @@ namespace AudioMerger
             //Console.WriteLine("Hello World!");
 
 
-            Console.WriteLine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location));
-            Console.WriteLine(Directory.GetCurrentDirectory());
+            //Console.WriteLine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location));
+            //Console.WriteLine(Directory.GetCurrentDirectory());
             
-            Console.WriteLine();
             foreach (string item in Directory.GetFiles(Directory.GetCurrentDirectory()))
             {
                 //Console.WriteLine(item); //this is full path of each file
@@ -29,14 +28,16 @@ namespace AudioMerger
                 if (fileName.StartsWith("A",StringComparison.OrdinalIgnoreCase) && fileName.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
                 {
                     listA.Add(fileName);
-                    Console.WriteLine($"File {fileName} has been added to List-A");
+                    //Console.WriteLine($"File {fileName} has been added to List-A");
                 }
                 else if (fileName.StartsWith("B", StringComparison.OrdinalIgnoreCase) && fileName.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
                 {
                     listB.Add(fileName);
-                    Console.WriteLine($"File {fileName} has been added to List-B");
+                    //Console.WriteLine($"File {fileName} has been added to List-B");
                 }
             }
+
+            Console.WriteLine($"Total Item’s in List-A: {listA.Count}, List-B: {listB.Count}");
 
             Console.WriteLine(@"
 ============================================================
