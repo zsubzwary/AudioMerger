@@ -12,8 +12,10 @@ namespace AudioMerger
 
 
             Console.WriteLine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location));
-            Console.WriteLine(System.IO.Directory.GetCurrentDirectory());
-            foreach (var item in args)
+            Console.WriteLine(Directory.GetCurrentDirectory());
+            
+            Console.WriteLine();
+            foreach (var item in Directory.GetFiles(Directory.GetCurrentDirectory()))
             {
                 Console.WriteLine(item);
             }
